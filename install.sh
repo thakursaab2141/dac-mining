@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # DAC Chain Light Node + Mining — One-shot installer
+# Made by @kittu2141  |  Telegram: https://t.me/gujjucryptto
 # Usage:  bash install.sh
-# Or:     bash <(curl -fsSL https://raw.githubusercontent.com/USER/REPO/main/install.sh)
+# Or:     bash <(curl -fsSL https://raw.githubusercontent.com/thakursaab2141/dac-mining/main/install.sh)
 
 set -euo pipefail
 
@@ -11,6 +12,18 @@ BIN="$DAC_DIR/dacnode"
 NODE_NAME="${NODE_NAME:-MyDACNode-$(hostname)}"
 MINER_THREADS="${MINER_THREADS:-1}"
 
+cat <<'BANNER'
+
+  ____    _    ____    __  __ _       _
+ |  _ \  / \  / ___|  |  \/  (_)_ __ (_)_ __   __ _
+ | | | |/ _ \| |      | |\/| | | '_ \| | '_ \ / _` |
+ | |_| / ___ \ |___   | |  | | | | | | | | | | (_| |
+ |____/_/   \_\____|  |_|  |_|_|_| |_|_|_| |_|\__, |
+                                              |___/
+       Made by @kittu2141  |  t.me/gujjucryptto
+BANNER
+
+echo ""
 echo "==> DAC Light Node Installer"
 echo "==> Dir: $DAC_DIR  Threads: $MINER_THREADS  Name: $NODE_NAME"
 
@@ -68,12 +81,26 @@ sudo systemctl enable dacnode
 sudo systemctl restart dacnode
 
 sleep 3
-echo ""
-echo "============================================================"
-echo " DONE. Node background me chalu hai."
-echo "============================================================"
-echo " Wallet:   $ADDR"
-echo " Logs:     bash logs.sh"
-echo " Backup:   bash backup.sh"
-echo " Explorer: https://exptest.dachain.tech/address/$ADDR"
-echo "============================================================"
+cat <<EOF
+
+╔══════════════════════════════════════════════════════════════╗
+║              ✓ DONE  —  NODE BACKGROUND ME CHALU             ║
+╚══════════════════════════════════════════════════════════════╝
+
+  Wallet     : $ADDR
+  Logs       : bash <(curl -fsSL https://raw.githubusercontent.com/thakursaab2141/dac-mining/main/logs.sh)
+  Backup     : bash <(curl -fsSL https://raw.githubusercontent.com/thakursaab2141/dac-mining/main/backup.sh)
+  Restore    : bash <(curl -fsSL https://raw.githubusercontent.com/thakursaab2141/dac-mining/main/restore.sh)
+  Explorer   : https://exptest.dachain.tech/address/$ADDR
+
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║         Made with care by  @kittu2141                        ║
+║         Telegram Channel:  https://t.me/gujjucryptto         ║
+║                                                              ║
+║   Crypto airdrops • testnet farming • mining tips           ║
+║   ↳ Updates aur naye scripts ke liye join kar lo!            ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+
+EOF
