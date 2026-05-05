@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # DAC Wallet Full Backup — Address + Keystore JSON + Private Key
+# Made by @kittu2141  |  Telegram: https://t.me/gujjucryptto
 # Usage:  bash backup.sh
 
 set -e
@@ -32,7 +33,9 @@ ks_raw = open(ks_path).read()
 ks = json.loads(ks_raw)
 
 print()
-print("==================== WALLET FULL BACKUP ====================")
+print("════════════════════ WALLET FULL BACKUP ════════════════════")
+print("           @kittu2141  |  t.me/gujjucryptto")
+print("════════════════════════════════════════════════════════════")
 print()
 print(">>> 1. ADDRESS")
 print("0x" + ks['address'])
@@ -50,9 +53,13 @@ try:
     print(">>> 4. PRIVATE KEY (sabse important — alag note me save)")
     print("0x" + pk.hex())
     print()
-    print("============================================================")
+    print("════════════════════════════════════════════════════════════")
     print(" Save kar PC pe SAFE place pe. Network me NEVER share kar.")
-    print("============================================================")
+    print("════════════════════════════════════════════════════════════")
+    print()
+    print(" Updates + new scripts ke liye join:")
+    print("   Telegram: https://t.me/gujjucryptto  (@kittu2141)")
+    print("════════════════════════════════════════════════════════════")
 except Exception as e:
     print("ERROR: GALAT PASSWORD")
     print(f"  detail: {e}")
