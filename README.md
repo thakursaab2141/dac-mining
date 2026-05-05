@@ -1,36 +1,61 @@
-# DAC Chain Light Node + Mining
+<div align="center">
 
-Free me **DAC testnet light node + miner** chalane ke liye 3 simple scripts. Linux VPS pe kaam karta hai (Ubuntu/Debian recommended).
+# DAC Chain Mining Node
+
+### Free DAC Testnet Light Node + Miner — One-Command Setup
+
+[![Telegram](https://img.shields.io/badge/TELEGRAM-@gujjucryptto-26A5E4?style=for-the-badge&logo=telegram&logoColor=white&labelColor=000000)](https://t.me/gujjucryptto)
+[![Made By](https://img.shields.io/badge/MADE_BY-@kittu2141-FF4081?style=for-the-badge&logo=github&logoColor=white&labelColor=000000)](https://github.com/thakursaab2141)
+[![License](https://img.shields.io/badge/LICENSE-MIT-FFC107?style=for-the-badge&logoColor=white&labelColor=000000)](LICENSE)
+
+[![Chain](https://img.shields.io/badge/CHAIN-DAC_TESTNET-7B61FF?style=for-the-badge&logoColor=white&labelColor=000000)](https://docs.dachain.tech)
+[![Status](https://img.shields.io/badge/STATUS-LIVE-00C853?style=for-the-badge&logoColor=white&labelColor=000000)](https://exptest.dachain.tech)
+[![Setup](https://img.shields.io/badge/SETUP-1_COMMAND-FF6D00?style=for-the-badge&logoColor=white&labelColor=000000)](#quick-start)
+
+[![Linux](https://img.shields.io/badge/LINUX-UBUNTU-E95420?style=for-the-badge&logo=ubuntu&logoColor=white&labelColor=000000)](#requirements)
+[![Bash](https://img.shields.io/badge/SHELL-BASH-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white&labelColor=000000)](#)
+[![Architecture](https://img.shields.io/badge/ARCH-AMD64_|_ARM64-blue?style=for-the-badge&logoColor=white&labelColor=000000)](#)
+
+</div>
+
+---
 
 ## Requirements
 
-- Linux VPS — x86_64 ya ARM64
-- ~5 GB free disk
-- 1 GB+ RAM
-- `sudo` access
-- Python 3 (pre-installed on most Ubuntu)
+| Need | Spec |
+|------|------|
+| OS | Linux VPS (Ubuntu/Debian) |
+| Arch | x86_64 / ARM64 |
+| Disk | ~5 GB free |
+| RAM | 1 GB+ |
+| Access | sudo |
+| Python | 3.x (pre-installed on Ubuntu) |
 
-## Quick Start (3 Commands Only)
+---
 
-### 1. Install + Mining Start (one-time)
+## Quick Start
+
+> **4 commands only — copy-paste karo, ho gaya kaam.**
+
+### `1.` Install + Mining Start (one-time)
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/thakursaab2141/dac-mining/main/install.sh)
 ```
 Wallet password puchega. Set karo, yaad rakho. Mining background me chalu ho jayegi, VPS reboot pe bhi auto-restart.
 
-### 2. Wallet Backup (jab chahe)
+### `2.` Wallet Backup (jab chahe)
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/thakursaab2141/dac-mining/main/backup.sh)
 ```
 Address + keystore JSON + private key — sab terminal me dikhega. Password puchega decrypt karne ke liye. PC pe safe jagah save kar.
 
-### 2b. Restore Old Wallet (purani private key se mining)
+### `3.` Restore Old Wallet (purani private key se mining)
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/thakursaab2141/dac-mining/main/restore.sh)
 ```
-Naye VPS pe ya jab purani wallet wapas chahiye — private key + naya password daal, same address se mining chalu ho jayegi. Agar pehle se koi wallet mili to confirm puchega before overwrite.
+Naye VPS pe ya jab purani wallet wapas chahiye — private key + naya password daal, same address se mining chalu ho jayegi. Pehle se koi wallet mili to confirm puchega before overwrite.
 
-### 3. Logs + Status (kabhi bhi check)
+### `4.` Logs + Status (kabhi bhi check)
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/thakursaab2141/dac-mining/main/logs.sh)
 ```
@@ -103,10 +128,8 @@ web3.fromWei(eth.getBalance(eth.coinbase), 'ether')   // balance in DACC
 ## Wallet Recovery
 
 Naye VPS pe ya kahin bhi wallet wapas chahiye:
-1. `wallet.json` ko `~/dac/data/keystore/` me daal
-2. `install.sh` chala — same wallet detect karega, naya nahi banayega
-
-Ya MetaMask me JSON import → password.
+- **Easy way** → `restore.sh` chala, private key paste kar, ho gaya
+- **Manual way** → `wallet.json` ko `~/dac/data/keystore/` me daal, `install.sh` chala (same wallet detect karega)
 
 ---
 
@@ -128,6 +151,21 @@ Ya MetaMask me JSON import → password.
 
 ---
 
-## License
+<div align="center">
 
-MIT
+## Connect & Updates
+
+[![Join Telegram](https://img.shields.io/badge/JOIN_TELEGRAM-@gujjucryptto-26A5E4?style=for-the-badge&logo=telegram&logoColor=white&labelColor=000000)](https://t.me/gujjucryptto)
+
+**Crypto airdrops, testnet farming, mining tips — sab updates yahan milte hain**
+
+---
+
+### Made with care by [@kittu2141](https://t.me/gujjucryptto)
+
+[![Telegram](https://img.shields.io/badge/-Telegram-26A5E4?style=flat-square&logo=telegram&logoColor=white)](https://t.me/gujjucryptto)
+[![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/thakursaab2141)
+
+`MIT License` — Free to use, modify, share
+
+</div>
