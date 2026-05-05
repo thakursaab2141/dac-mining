@@ -1,0 +1,7 @@
+*.log
+*.tar.gz
+*.zip
+data/
+keystore/
+.env
+.DS_Store
