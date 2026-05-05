@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # DAC Wallet Restore + Mining Start
+# Made by @kittu2141  |  Telegram: https://t.me/gujjucryptto
 # Purani private key daalo, same wallet se mining chalu kar do.
 # Usage:  bash restore.sh
 
@@ -12,6 +13,18 @@ BIN="$DAC_DIR/dacnode"
 NODE_NAME="${NODE_NAME:-MyDACNode-$(hostname)}"
 MINER_THREADS="${MINER_THREADS:-1}"
 
+cat <<'BANNER'
+
+  ____    _    ____   ____           _
+ |  _ \  / \  / ___| |  _ \ ___  ___| |_ ___  _ __ ___
+ | | | |/ _ \| |     | |_) / _ \/ __| __/ _ \| '__/ _ \
+ | |_| / ___ \ |___  |  _ <  __/\__ \ || (_) | | |  __/
+ |____/_/   \_\____| |_| \_\___||___/\__\___/|_|  \___|
+
+       Made by @kittu2141  |  t.me/gujjucryptto
+BANNER
+
+echo ""
 echo "==> DAC Wallet Restore + Mining"
 echo "==> Dir: $DAC_DIR  Threads: $MINER_THREADS"
 echo ""
@@ -137,12 +150,25 @@ sudo systemctl enable dacnode
 sudo systemctl restart dacnode
 
 sleep 3
-echo ""
-echo "============================================================"
-echo " DONE. Old wallet restored + mining chalu."
-echo "============================================================"
-echo " Wallet:   $ADDR"
-echo " Logs:     bash <(curl -fsSL https://raw.githubusercontent.com/thakursaab2141/dac-mining/main/logs.sh)"
-echo " Backup:   bash <(curl -fsSL https://raw.githubusercontent.com/thakursaab2141/dac-mining/main/backup.sh)"
-echo " Explorer: https://exptest.dachain.tech/address/$ADDR"
-echo "============================================================"
+cat <<EOF
+
+╔══════════════════════════════════════════════════════════════╗
+║         ✓ DONE  —  OLD WALLET RESTORED + MINING ON           ║
+╚══════════════════════════════════════════════════════════════╝
+
+  Wallet     : $ADDR
+  Logs       : bash <(curl -fsSL https://raw.githubusercontent.com/thakursaab2141/dac-mining/main/logs.sh)
+  Backup     : bash <(curl -fsSL https://raw.githubusercontent.com/thakursaab2141/dac-mining/main/backup.sh)
+  Explorer   : https://exptest.dachain.tech/address/$ADDR
+
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║         Made with care by  @kittu2141                        ║
+║         Telegram Channel:  https://t.me/gujjucryptto         ║
+║                                                              ║
+║   Crypto airdrops • testnet farming • mining tips           ║
+║   ↳ Updates aur naye scripts ke liye join kar lo!            ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+
+EOF
