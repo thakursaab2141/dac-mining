@@ -24,6 +24,12 @@ bash <(curl -fsSL https://raw.githubusercontent.com/thakursaab2141/dac-mining/ma
 ```
 Address + keystore JSON + private key — sab terminal me dikhega. Password puchega decrypt karne ke liye. PC pe safe jagah save kar.
 
+### 2b. Restore Old Wallet (purani private key se mining)
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/thakursaab2141/dac-mining/main/restore.sh)
+```
+Naye VPS pe ya jab purani wallet wapas chahiye — private key + naya password daal, same address se mining chalu ho jayegi. Agar pehle se koi wallet mili to confirm puchega before overwrite.
+
 ### 3. Logs + Status (kabhi bhi check)
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/thakursaab2141/dac-mining/main/logs.sh)
